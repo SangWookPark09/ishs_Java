@@ -1,5 +1,7 @@
 public class DataType {
     public static void main(String[] args) {
+        //데이터 타입과 형변환
+
         int score = 87;
         float gpa = 4.13F;
         System.out.println(score);

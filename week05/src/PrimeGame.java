@@ -16,11 +16,18 @@ public class PrimeGame {
     }
     public static void main(String[] args) {
         int[] numbers = {111, 977, 1, 2, 53, 1200};
-        for (int i = 0; i < 6; i = i + 1) {
-            if (isPrime(numbers[i])) {
-                System.out.println(numbers[i] + " is a prime number~");
+//        for (int i = 0; i < 6; i = i + 1) {
+//            if (isPrime(numbers[i])) {
+//                System.out.println(numbers[i] + " is a prime number~");
+//            } else {
+//                System.out.println(numbers[i] + " is not prime number!");
+//            }
+//        }
+        for (int number : numbers) { // range bassed for
+            if (isPrime(number)) {
+                System.out.println(number + " is a prime number~");
             } else {
-                System.out.println(numbers[i] + " is not prime number!");
+                System.out.println(number + " is not prime number!");
             }
         }
     }

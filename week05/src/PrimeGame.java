@@ -15,12 +15,13 @@ public class PrimeGame {
         return true;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
-        if(isPrime(number)){
-            System.out.println(number + " is a prime number~");
-        }else{
-            System.out.println(number + " is not prime number!");
+        int[] numbers = {111, 977, 1, 2, 53, 1200};
+        for (int i = 0; i < 6; i = i + 1) {
+            if (isPrime(numbers[i])) {
+                System.out.println(numbers[i] + " is a prime number~");
+            } else {
+                System.out.println(numbers[i] + " is not prime number!");
+            }
         }
     }
 }

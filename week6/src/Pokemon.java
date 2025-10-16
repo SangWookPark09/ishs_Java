@@ -1,5 +1,5 @@
 public abstract class Pokemon {
-    protected String name;
+    private String name;
     private int hp;
 
     public Pokemon(String name, int hp){

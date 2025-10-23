@@ -32,7 +32,7 @@ public abstract class Pokemon {
     }
 
     public void performFlyable() {
-        this.flyingtool.fly();
+        this.flyingtool.fly(this);
     }
 
     public abstract void attack(Pokemon target);

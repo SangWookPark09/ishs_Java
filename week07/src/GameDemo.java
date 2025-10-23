@@ -3,15 +3,15 @@ public class GameDemo {
         Jetpack jetpack = new Jetpack();
 
 
-        Pikachu p1 = new Pikachu(100, 27);
-        p1.setFlyingtool(new NoFly());
+        Pikachu p1 = new Pikachu(100, 27, new NoFly());
+//        p1.setFlyingtool(new NoFly());
         p1.performFlyable();
         p1.setFlyingtool(jetpack);
         p1.performFlyable();
 //        Pikachu p2 = new Pikachu(100, 28);
 //        Sqiurtle s1 = new Sqiurtle(120, 21);
-        Charizard c1 = new Charizard(200, 40);
-        c1.setFlyingtool(new Wings());
+        Charizard c1 = new Charizard(200, 40, new Wings());
+//        c1.setFlyingtool(new Wings());
         c1.performFlyable();
 
         System.out.println("배틀 시작!");

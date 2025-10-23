@@ -1,7 +1,7 @@
 public class Charizard extends Pokemon{
     public Charizard(int hp, int attackPower){
-        super("피카츄", hp, attackPower); // 부모클래스의 생성자 보호
-        System.out.println("그라라라~");
+        super("리자몽", hp, attackPower); // 부모클래스의 생성자 보호
+        System.out.println("그르르르~");
     }
 
     @Override

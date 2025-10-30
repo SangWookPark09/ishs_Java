@@ -1,7 +1,9 @@
+package exceptions;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ExeptionTest {
+public class ExceptionTest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int numerator = 0;

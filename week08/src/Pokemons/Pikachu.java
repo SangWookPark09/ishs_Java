@@ -1,3 +1,7 @@
+package Pokemons;
+
+import fly.NoFly;
+
 public class Pikachu extends Pokemon{
     public Pikachu(int hp, int attackPower, NoFly noFly){
         super("피카츄", hp, attackPower, noFly); // 부모클래스의 생성자 보호

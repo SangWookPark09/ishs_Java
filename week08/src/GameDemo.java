@@ -1,3 +1,10 @@
+import Pokemons.Charizard;
+import Pokemons.Pikachu;
+import Pokemons.Pokemon;
+import Pokemons.Sqiurtle;
+import fly.NoFly;
+import fly.Wings;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -44,22 +51,22 @@ public class GameDemo {
             enemyPokemon = new Charizard(200, 40, new Wings());
         }
 
-//        Pokemon playerPokemon = new Pikachu(100, 27, new NoFly());
-//        Pokemon playerPokemon = new Charizard(200, 40, new Wings());
-//        Pokemon playerPokemon = new Sqiurtle(120, 21, new NoFly());
+//        Pokemons.Pokemon playerPokemon = new Pokemons.Pikachu(100, 27, new fly.NoFly());
+//        Pokemons.Pokemon playerPokemon = new Pokemons.Charizard(200, 40, new fly.Wings());
+//        Pokemons.Pokemon playerPokemon = new Pokemons.Sqiurtle(120, 21, new fly.NoFly());
 
-        //        Jetpack jetpack = new Jetpack();
+        //        fly.Jetpack jetpack = new fly.Jetpack();
 //
 //
-//        Pikachu p1 = new Pikachu(100, 27, new NoFly());
-////        p1.setFlyingtool(new NoFly());
+//        Pokemons.Pikachu p1 = new Pokemons.Pikachu(100, 27, new fly.NoFly());
+////        p1.setFlyingtool(new fly.NoFly());
 //        p1.performFlyable();
 //        p1.setFlyingtool(jetpack);
 //        p1.performFlyable();
-////        Pikachu p2 = new Pikachu(100, 28);
-////        Sqiurtle s1 = new Sqiurtle(120, 21);
-//        Charizard c1 = new Charizard(200, 40, new Wings());
-////        c1.setFlyingtool(new Wings());
+////        Pokemons.Pikachu p2 = new Pokemons.Pikachu(100, 28);
+////        Pokemons.Sqiurtle s1 = new Pokemons.Sqiurtle(120, 21);
+//        Pokemons.Charizard c1 = new Pokemons.Charizard(200, 40, new fly.Wings());
+////        c1.setFlyingtool(new fly.Wings());
 //        c1.performFlyable();
 //
 //        System.out.println("배틀 시작!");
@@ -86,9 +93,9 @@ public class GameDemo {
 //        }
 //        System.out.println("배틀 종료");
 
-//        Pikachu mypikachu = new Pikachu(100, 27);
-//        Pikachu yourpikachu = new Pikachu(100, 28);
-//        Sqiurtle enemySqiurtle = new Sqiurtle(120, 21);
+//        Pokemons.Pikachu mypikachu = new Pokemons.Pikachu(100, 27);
+//        Pokemons.Pikachu yourpikachu = new Pokemons.Pikachu(100, 28);
+//        Pokemons.Sqiurtle enemySqiurtle = new Pokemons.Sqiurtle(120, 21);
 //        System.out.println("Game Start~");
 //        mypikachu.attack(enemySqiurtle);
 //        for(int i = 0; i < 5; i++)

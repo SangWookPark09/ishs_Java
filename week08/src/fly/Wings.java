@@ -1,3 +1,7 @@
+package fly;
+
+import Pokemons.Pokemon;
+
 public class Wings implements Flyable {
     @Override
     public void fly(Pokemon pokemon) {

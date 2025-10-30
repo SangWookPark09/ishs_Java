@@ -1,3 +1,7 @@
+package Pokemons;
+
+import fly.Flyable;
+
 public abstract class Pokemon {
     private String name;
     private int hp;

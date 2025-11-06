@@ -65,29 +65,13 @@ public class GameDemo {
             enemyPokemon = new Charizard(200, 40, new Wings(), charizardSkills);
         }
 
-//        Pokemons.Pokemon playerPokemon = new Pokemons.Pikachu(100, 27, new fly.NoFly());
-//        Pokemons.Pokemon playerPokemon = new Pokemons.Charizard(200, 40, new fly.Wings());
-//        Pokemons.Pokemon playerPokemon = new Pokemons.Sqiurtle(120, 21, new fly.NoFly());
+        System.out.println("배틀 시작!");
+        System.out.println("==============");
 
-        //        fly.Jetpack jetpack = new fly.Jetpack();
-//
-//
-//        Pokemons.Pikachu p1 = new Pokemons.Pikachu(100, 27, new fly.NoFly());
-////        p1.setFlyingtool(new fly.NoFly());
-//        p1.performFlyable();
-//        p1.setFlyingtool(jetpack);
-//        p1.performFlyable();
-////        Pokemons.Pikachu p2 = new Pokemons.Pikachu(100, 28);
-////        Pokemons.Sqiurtle s1 = new Pokemons.Sqiurtle(120, 21);
-//        Pokemons.Charizard c1 = new Pokemons.Charizard(200, 40, new fly.Wings());
-////        c1.setFlyingtool(new fly.Wings());
-//        c1.performFlyable();
-//
-//        System.out.println("배틀 시작!");
-//        System.out.println(p1);
-//        System.out.println(c1);
-//        System.out.println("==============");
-//
+        for (int i = 0; i < playerPokemon.skills.length; i++) {
+            System.out.println((i+1) + ". " + playerPokemon.skills[i].getName() + " (" + playerPokemon.skills[i].getDamage() + ")");
+        }
+
 //        int turn = 1;
 //
 //        while(!p1.isFainted() && !c1.isFainted()){

@@ -9,9 +9,9 @@ public abstract class Pokemon {
     private int hp;
     private int attackPower;
     protected Flyable flyingtool; // has-a (Aggregation)
-    public Skill[] skills;
+    public ArrayList<Skill> skills = new ArrayList<>();
 
-    public Pokemon(String name, int hp, int attackPower, Flyable flyingtool, Skill[] skills){
+    public Pokemon(String name, int hp, int attackPower, Flyable flyingtool, ArrayList<Skill> skills){
         this.name = name;
         this.hp = hp;
         this.attackPower = attackPower;

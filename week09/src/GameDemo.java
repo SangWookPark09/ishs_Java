@@ -2,28 +2,26 @@ import Pokemons.*;
 import fly.NoFly;
 import fly.Wings;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GameDemo {
     public static void main(String[] args) {
-        Skill[] pikachuSkills = {
-                new Skill("Nuzzle", 20),
-                new Skill("ThunderShock", 40),
-                new Skill("Quick Attack", 40)
-        };
+        ArrayList<Skill> pikachuSkills = new ArrayList<>();
+        pikachuSkills.add(new Skill("Nuzzle", 20));
+        pikachuSkills.add(new Skill("ThunderShock", 40));
+        pikachuSkills.add(new Skill("Quick Attack", 40));
 
-        Skill[] sqiurtleSkills = {
-                new Skill("Tackle", 40),
-                new Skill("Water gun", 40),
-                new Skill("Rapid Spin", 50)
-        };
+        ArrayList<Skill> sqiurtleSkills = new ArrayList<>();
+        sqiurtleSkills.add(new Skill("Tackle", 40));
+        sqiurtleSkills.add(new Skill("Water gun", 40));
+        sqiurtleSkills.add(new Skill("Rapid Spin", 50));
 
-        Skill[] charizardSkills = {
-                new Skill("Scratch", 40),
-                new Skill("Dragon Breath", 60),
-                new Skill("Flare Blitz", 120)
-        };
+        ArrayList<Skill> charizardSkills = new ArrayList<>();
+        charizardSkills.add(new Skill("Scratch", 40));
+        charizardSkills.add(new Skill("Dragon Breath", 60));
+        charizardSkills.add(new Skill("Flare Blitz", 120));
 
         Pokemon playerPokemon = null;
         Scanner scanner = new Scanner(System.in);
@@ -66,19 +64,34 @@ public class GameDemo {
         System.out.println("배틀 시작!");
         System.out.println("==============");
 
+        charizardSkills.add(new Skill("Inferno", 100));
         while(true) {
-            for (int i = 0; i < playerPokemon.skills.length; i++) {
-                System.out.println((i + 1) + ". " + playerPokemon.skills[i].getName() + " (" + playerPokemon.skills[i].getDamage() + ")");
+            System.out.print("플레이어 행동 선택\n1)전투  2)도망  3)종료 : ");
+            int actNumber = scanner.nextInt();
+            if(actNumber == 1) {
+                for (int i = 0; i < playerPokemon.skills.size(); i++) {
+                    System.out.println((i + 1) + ". " + playerPokemon.skills.get(i).getName() + " (" + playerPokemon.skills.get(i).getDamage() + ")");
+                }
+
+                System.out.print("Select skill : ");
+                int skillNumber = scanner.nextInt() - 1;
+
+                playerPokemon.attack(enemyPokemon, skillNumber);
+                enemyPokemon.attack(playerPokemon, (int) (Math.random() * 3));
+
+                if (enemyPokemon.isFainted() || playerPokemon.isFainted())
+                    break;
             }
-
-            System.out.print("Select skill : ");
-            int skillNumber = scanner.nextInt() - 1;
-
-            playerPokemon.attack(enemyPokemon, skillNumber);
-            enemyPokemon.attack(playerPokemon, (int)(Math.random() * 3));
-
-            if (enemyPokemon.isFainted() || playerPokemon.isFainted())
+            else if(actNumber == 2) {
+                playerPokemon.performFlyable();
                 break;
+            }
+            else if(actNumber == 3) {
+                break;
+            }
+            else {
+                System.out.println("선택 메뉴에서 골라주세요!");
+            }
         }
         System.out.println("배틀 종료");
     }

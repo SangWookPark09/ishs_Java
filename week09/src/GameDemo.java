@@ -66,43 +66,20 @@ public class GameDemo {
         System.out.println("배틀 시작!");
         System.out.println("==============");
 
-        for (int i = 0; i < playerPokemon.skills.length; i++) {
-            System.out.println((i+1) + ". " + playerPokemon.skills[i].getName() + " (" + playerPokemon.skills[i].getDamage() + ")");
+        while(true) {
+            for (int i = 0; i < playerPokemon.skills.length; i++) {
+                System.out.println((i + 1) + ". " + playerPokemon.skills[i].getName() + " (" + playerPokemon.skills[i].getDamage() + ")");
+            }
+
+            System.out.print("Select skill : ");
+            int skillNumber = scanner.nextInt() - 1;
+
+            playerPokemon.attack(enemyPokemon, skillNumber);
+            enemyPokemon.attack(playerPokemon, (int)(Math.random() * 3));
+
+            if (enemyPokemon.isFainted() || playerPokemon.isFainted())
+                break;
         }
-
-        System.out.print("Select skill : ");
-        int skillNumber = scanner.nextInt() - 1;
-
-        enemyPokemon.setHp(enemyPokemon.getHp() - playerPokemon.skills[skillNumber].getDamage());
-        System.out.println(enemyPokemon.getName() + "의 체력은 " + enemyPokemon.getHp() + "이 남았습니다");
-//        int turn = 1;
-//
-//        while(!p1.isFainted() && !c1.isFainted()){
-//            System.out.println("턴 " + turn + "시작.");
-//            p1.attack(c1);
-//            if(c1.isFainted()){
-//                System.out.println(c1.getName() + "이(가) 기절했습니다! " + p1.getName() + " 승리!");
-//                break;
-//            }
-//            c1.attack(p1);
-//            if(p1.isFainted()){
-//                System.out.println(p1.getName() + "이(가) 기절했습니다! " + c1.getName() + " 승리!");
-//                break;
-//            }
-//            System.out.println("==============");
-//            turn++;
-//        }
-//        System.out.println("배틀 종료");
-
-//        Pokemons.Pikachu mypikachu = new Pokemons.Pikachu(100, 27);
-//        Pokemons.Pikachu yourpikachu = new Pokemons.Pikachu(100, 28);
-//        Pokemons.Sqiurtle enemySqiurtle = new Pokemons.Sqiurtle(120, 21);
-//        System.out.println("Game Start~");
-//        mypikachu.attack(enemySqiurtle);
-//        for(int i = 0; i < 5; i++)
-//            enemySqiurtle.attack(mypikachu);
-//
-//        System.out.println(enemySqiurtle);
-//        System.out.println(mypikachu);
+        System.out.println("배틀 종료");
     }
 }

@@ -1,6 +1,7 @@
 package Pokemons;
 
 import fly.Wings;
+
 public class Charizard extends Pokemon{
     public Charizard(int hp, int attackPower, Wings wings, Skill[] skills){
         super("리자몽", hp, attackPower, wings, skills); // 부모클래스의 생성자 보호
@@ -8,9 +9,9 @@ public class Charizard extends Pokemon{
     }
 
     @Override
-    public void attack(Pokemon target) {
-        int damage = getAttackPower() + 5;
-        System.out.println(getName() + " -> " + target.getName() + "에게 '불대문자' 사용! (데미지 : " + damage + ")"); //name is private
+    public void attack(Pokemon target, int choice) {
+        int damage = getAttackPower() + 5 + this.skills[choice].getDamage();
+        System.out.println(getName() + " -> " + target.getName() + "에게 " + this.skills[choice].getName() + "사용! (데미지 : " + damage + ")"); //name is private
 //        System.out.println(name + " -> " + target.getName() + "에게 '전기충격' 사용"); //name is protected
         //target.setHp(target.getHp()-damage);
         target.receiveDamage(damage);

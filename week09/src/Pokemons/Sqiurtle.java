@@ -3,8 +3,8 @@ package Pokemons;
 import fly.NoFly;
 
 public class Sqiurtle extends Pokemon {
-    public Sqiurtle(int hp, int attackPower, NoFly noFly){
-        super("꼬부기", hp, attackPower, noFly); // 부모클래스의 생성자 보호
+    public Sqiurtle(int hp, int attackPower, NoFly noFly, Skill[] skills){
+        super("꼬부기", hp, attackPower, noFly, skills); // 부모클래스의 생성자 보호
         System.out.println("꼬북꼬북~");
     }
 

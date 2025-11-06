@@ -2,17 +2,21 @@ package Pokemons;
 
 import fly.Flyable;
 
+import java.util.ArrayList;
+
 public abstract class Pokemon {
     private String name;
     private int hp;
     private int attackPower;
     protected Flyable flyingtool; // has-a (Aggregation)
+    Skill[] skills;
 
-    public Pokemon(String name, int hp, int attackPower, Flyable flyingtool){
+    public Pokemon(String name, int hp, int attackPower, Flyable flyingtool, Skill[] skills){
         this.name = name;
         this.hp = hp;
         this.attackPower = attackPower;
         this.flyingtool = flyingtool;
+        this.skills = skills;
     }
 
     public String getName(){
